@@ -1,0 +1,11 @@
+[ {
+  "uid" : "a9faf0780f16ca5",
+  "name" : "TestDiaoxiao.test_dianxiao_khdr[P20181027200828-\\u738b\\u4e16\\u658c-18784000687----\\u83e0\\u841d\\u8d37-\\u674e\\u658c-13922098626-\\u738b\\u78ca-18806359392---\\u83e0\\u841d\\u8d37-\\u6f58\\u661f\\u5b87-15722921728-\\u5168\\u7f51\\u8d37-10-\\u738b\\u91d1\\u521a-13356997180-\\u674e\\u6f8e\\u6d01]",
+  "time" : {
+    "start" : 1543819625992,
+    "stop" : 1543819670909,
+    "duration" : 44917
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
