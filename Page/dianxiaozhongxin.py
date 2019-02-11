@@ -40,6 +40,9 @@ class PageDianxiao(Base):
         sleep(1)
         self.base_click_btn(Page.dx_gl_ddywc)
         # 点击拜访状态
+        self.base_click_btn(Page.dx_gl_bfzt)
+        sleep(1)
+        self.base_click_btn(Page.dx_gl_dhkh)
         # 输入电销员
         self.base_input_text(Page.dxy, khgl_dxy)
         # 输入拜访次数
@@ -48,6 +51,11 @@ class PageDianxiao(Base):
         self.base_input_text(Page.drly, khgl_drly)
         # 注册来源
         self.base_input_text(Page.zcly, khgl_zcly)
+        # 时间筛选
+        self.base_click_btn(Page.dx_gl_sxsj)
+        sleep(1)
+        self.base_click_btn(Page.dx_gl_sxsj_dr)
+        # 选择日期
         # 点击查询
         self.base_click_btn(Page.cx_gl)
         sleep(5)

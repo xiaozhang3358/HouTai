@@ -206,24 +206,17 @@ dd_ddlb = By.XPATH, 'html/body/div[1]/div[1]/div[2]/div/ul/li[1]/a'
 dd_lb_ddbh = By.CSS_SELECTOR, '#sn'
 # 订单状态
 dd_lb_ddzt = By.XPATH, 'html/body/div[1]/form/div[2]/div/a'
-# 选择待审核
-dd_lb_dsh = By.XPATH, 'html/body/div[9]/ul/li[2]/div'
+# 选择审核通过
+dd_lb_shtg = By.XPATH, 'html/body/div[9]/ul/li[7]/div'
 # 客户姓名
-dd_lb_name = By.CSS_SELECTOR, '#username'
+dd_lb_name = By.XPATH, 'html/body/div[1]/form/div[3]/input[1]'
 # 手机号
-dd_lb_phone = By.CSS_SELECTOR, '#phone'
-# 所属省份
-dd_lb_sf = By.XPATH, 'html/body/div[1]/form/div[5]/div[1]/a'
-# 选择河南省
-dd_lb_hn = By.XPATH, 'html/body/div[10]/ul/li[4]/div'
-# 所属城市
-dd_lb_cs = By.XPATH, 'html/body/div[1]/form/div[5]/div[2]/a'
-# 选择郑州市
-dd_lb_zzs = By.XPATH, 'html/body/div[11]/ul/li[3]/div'
+dd_lb_phone = By.XPATH, 'html/body/div[1]/form/div[4]/input'
+# 创建时间
 # 客户来源
-dd_lb_ly = By.CSS_SELECTOR, '#reg_form'
+dd_lb_ly = By.XPATH, 'html/body/div[1]/form/div[6]/input'
 # 初审人
-dd_lb_csr = 'cpath', 'html/body/div[1]/form/div[8]/div[1]/a'
+dd_lb_csr = By.XPATH, 'html/body/div[1]/form/div[8]/div[1]/a'
 # 选择王世斌
 dd_lb_wsb = By.XPATH, 'html/body/div[12]/ul/li[2]/div'
 # 终审人
@@ -242,9 +235,9 @@ dd_zgsh = By.XPATH, 'html/body/div[1]/div[1]/div[2]/div/ul/li[3]/a'
 # 订单编号
 dd_zg_ddbh = By.CSS_SELECTOR, '#sn'
 # 客户姓名
-dd_zg_name = By.CSS_SELECTOR, '#username'
+dd_zg_name = By.XPATH, 'html/body/div[1]/form/div[3]/input[1]'
 # 手机号
-dd_zg_phone = By.CSS_SELECTOR, '#phone'
+dd_zg_phone = By.XPATH, 'html/body/div[1]/form/div[4]/input'
 # 查询
 dd_zg_cx = By.CSS_SELECTOR, '.btn.btn-success'
 
@@ -256,9 +249,9 @@ dd_ddsh = By.XPATH, 'html/body/div[1]/div[1]/div[2]/div/ul/li[2]/a'
 # 订单编号
 dd_ddsh_ddbh = By.CSS_SELECTOR, '#sn'
 # 客户姓名
-dd_ddsh_name = By.CSS_SELECTOR, '#username'
+dd_ddsh_name = By.XPATH, 'html/body/div[1]/form/div[3]/input[1]'
 # 手机号
-dd_ddsh_phone = By.CSS_SELECTOR, '#phone'
+dd_ddsh_phone = By.XPATH, 'html/body/div[1]/form/div[4]/input'
 # 查询
 dd_ddsh_cx = By.CSS_SELECTOR, '.btn.btn-success'
 
@@ -279,7 +272,7 @@ dd_dqy_cx = By.XPATH, 'html/body/div[1]/form/input[2]'
 # 订单管理
 ddgl = By.XPATH, 'html/body/div[1]/div[2]/div[1]/a'
 # 处理量监控
-dd_clljk = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[1]/a'
+dd_clljk = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[2]/a'
 # 点击选择订单创建时间
 dd_ddcjsj = By.XPATH, 'html/body/div[2]/div[1]/div[2]/div/input[1]'
 # 选择上个月
@@ -292,7 +285,7 @@ dd_ddwcsj_xz= By.XPATH, 'html/body/div[4]/div[1]/ul/li[5]'
 dd_cll_cx = By.XPATH, 'html/body/div[2]/div[1]/div[4]/button'
 
 # 订单调度
-dd_dddd = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[2]/a'
+dd_dddd = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[1]/a'
 
 
 
@@ -382,6 +375,8 @@ fk_hmd_mdlx_xz = By.XPATH, 'html/body/div[3]/ul/li[2]/div'
 fk_hmdk_tj_lmd = By.XPATH, 'html/body/div[1]/form/div[2]/div/div/a'
 # 选择拉黑灰名单
 fk_hmdk_tj_lmd_xz = By.XPATH, 'html/body/div[4]/ul/li[1]/div'
+# 灰名单结束时间
+fk_hmdk_tj_day = By.XPATH, 'html/body/div[1]/form/div[3]/div/input'
 # 输入内容信息
 fk_hmdk_tj_nrxx = By.XPATH, 'html/body/div[1]/form/div[4]/div/input'
 # 点击来源
@@ -426,22 +421,26 @@ zw_dz_hktx_zdzt = By.XPATH, 'html/body/div[2]/div[1]/div[6]/select'
 zw_dz_hktx_syts = By.XPATH, 'html/body/div[2]/div[1]/div[7]/select'
 # 提醒结果
 zw_dz_hktx_txjg = By.XPATH, 'html/body/div[2]/div[1]/div[8]/select'
-# 点击责任人
-zw_dz_hktx_zrr = By.XPATH, 'html/body/div[2]/div[1]/div[9]/span/span[1]/span/span[1]'
-# 选择责任人
-zw_dz_hktx_zrr_xz = By.XPATH, 'html/body/span/span/span[2]/ul/li[2]'
 # 输入提醒次数
-zw_dz_hktx_txcs = By.XPATH, 'html/body/div[2]/div[1]/div[10]/input'
+zw_dz_hktx_txcs = By.XPATH, 'html/body/div[2]/div[1]/div[9]/input'
 # 点击下次跟进时间
-zw_dz_hktx_xcgjsj = By.XPATH, 'html/body/div[2]/div[1]/div[11]/div/input[1]'
+zw_dz_hktx_xcgjsj = By.XPATH, 'html/body/div[2]/div[1]/div[10]/div/input[1]'
 # 选择下次跟进时间
 zw_dz_hktx_xcgjsj_xz = By.XPATH, 'html/body/div[3]/div[1]/ul/li[5]'
 # 点击账单日
-zw_dz_hktx_zdr = By.XPATH, 'html/body/div[2]/div[1]/div[12]/div/input[1]'
+zw_dz_hktx_zdr = By.XPATH, 'html/body/div[2]/div[1]/div[11]/div/input[1]'
 # 选择账单日
 zw_dz_hktx_zdr_xz = By.XPATH, 'html/body/div[4]/div[1]/ul/li[3]'
+# 点击分配时间
+zw_dz_hktx_fpsj = By.XPATH, 'html/body/div[2]/div[1]/div[12]/div/input[1]'
+# 选择分配时间
+zw_dz_hktx_fpsj_xz = By.XPATH, 'html/body/div[5]/div[1]/ul/li[3]'
+# 点击责任人
+zw_dz_hktx_zrr = By.XPATH, 'html/body/div[2]/div[1]/div[13]/span/span[1]/span/span[1]'
+# 选择责任人
+zw_dz_hktx_zrr_xz = By.XPATH, 'html/body/span/span/span[2]/ul/li[2]'
 # 查询
-zw_dz_hktx_cx = By.XPATH, 'html/body/div[2]/div[1]/div[13]/button'
+zw_dz_hktx_cx = By.XPATH, 'html/body/div[2]/div[1]/div[14]/button'
 # 点击全选
 # 点击已分配
 # 点击批量分配
@@ -454,49 +453,81 @@ zw_dz_txjl_name = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 客户电话
 zw_dz_txjl_phone = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 # 操作时间
-# 提醒结果
-# 用户状态
+# 点击提醒结果
+zw_dz_txjl_txjg = By.XPATH, 'html/body/div[1]/form/div[4]/div/a'
+# 选择提醒结果
+zw_dz_txjl_txjg_xz = By.XPATH, 'html/body/div[6]/ul/li[2]/div'
+# 点击用户状态
+zw_dz_txjl_yhzt = By.XPATH, 'html/body/div[1]/form/div[5]/div/a'
+# 选择用户状态
+zw_dz_txjl_yhzt_xz = By.XPATH, 'html/body/div[7]/ul/li[2]/div'
+# 点击责任人
+zw_dz_txjl_zrr = By.XPATH, 'html/body/div[1]/form/div[6]/div/a'
+# 选择责任人
+zw_dz_txjl_zrr_xz = By.XPATH, 'html/body/div[8]/ul/li[2]/div'
 # 查询
-zw_dz_txjl_cx = By.XPATH, 'html/body/div[1]/form/div[6]/input'
+zw_dz_txjl_cx = By.XPATH, 'html/body/div[1]/form/div[7]/input'
 
 
 # 贷后催收
-zw_dhcs = By.XPATH, 'html/body/div[1]/div[3]/div[1]/a'
+zw_dhcs = By.XPATH, 'html/body/div[1]/div[2]/div[1]/a'
 # 逾期客户池
-zw_dhcs_yqkhc = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[1]/a'
+zw_dhcs_yqkhc = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[1]/a'
 # 客户姓名
 zw_dhcs_yqkhc_name = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 客户电话
 zw_dhcs_yqkhc_phone = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 # 订单编号
 zw_dhcs_yqkhc_ddbh = By.XPATH, 'html/body/div[1]/form/div[3]/input'
-# 账单状态
-# 委案状态
-# 责任人
+# 点击账单状态
+zw_dhcs_yqkhc_zdzt = By.XPATH, 'html/body/div[1]/form/div[4]/div/a'
+# 选择账单状态
+zw_dhcs_yqkhc_zdzt_xz = By.XPATH, 'html/body/div[13]/ul/li[2]/div'
+# 点击委案状态
+zw_dhcs_yqkhc_wazt = By.XPATH, 'html/body/div[1]/form/div[5]/div/a'
+# 选择委案状态
+zw_dhcs_yqkhc_wazt_xz = By.XPATH, 'html/body/div[14]/ul/li[3]/div'
+# 输入逾期天数
+zw_dhcs_yqkhc_yqts = By.XPATH, 'html/body/div[1]/form/div[6]/input'
 # 账单日
 # 查询
-zw_dhcs_yqkhc_cx = By.XPATH, 'html/body/div[1]/form/div[8]/input'
+zw_dhcs_yqkhc_cx = By.XPATH, 'html/body/div[1]/form/div[9]/input[1]'
 
 # 逾期催款
-zw_dhcs_yqcs = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[2]/a'
+zw_dhcs_yqcs = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[2]/a'
 # 客户姓名
 zw_dhcs_yqcs_name = By.XPATH, 'html/body/div[2]/form/div[1]/input'
 # 客户电话
 zw_dhcs_yqcs_phone = By.XPATH, 'html/body/div[2]/form/div[2]/input'
+# 点击催收状态
+zw_dhcs_yqcs_cszt = By.XPATH, 'html/body/div[2]/form/div[3]/div/a'
+# 选择催收状态
+zw_dhcs_yqcs_cszt_xz = By.XPATH, 'html/body/div[8]/ul/li[2]/div'
+# 逾期天数
+# 距上次跟进天数
+# 责任人
 # 查询
 zw_dhcs_yqcs_cx = By.XPATH, 'html/body/div[2]/form/div[7]/input'
 
 # 催收记录管理
-zw_dhcs_csjlgl = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[3]/a'
+zw_dhcs_csjlgl = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[3]/a'
 # 客户姓名
 zw_dhcs_csjlgl_name = By.XPATH, 'html/body/div[2]/form/div[1]/input'
 # 客户电话
 zw_dhcs_csjlgl_phone = By.XPATH, 'html/body/div[2]/form/div[2]/input'
+# 点击操作类型
+zw_dhcs_csjlgl_czlx = By.XPATH, 'html/body/div[2]/form/div[3]/div/a'
+# 选择操作类型
+zw_dhcs_csjlgl_czlx_xz = By.XPATH, 'html/body/div[7]/ul/li[2]/div'
+# 点击结果类型
+zw_dhcs_csjlgl_jglx = By.XPATH, 'html/body/div[2]/form/div[4]/div/a'
+# 选择结果类型
+zw_dhcs_csjlgl_jglx_xz = By.XPATH, 'html/body/div[7]/ul/li[2]/div'
 # 查询
 zw_dhcs_csjlgl_cx = By.XPATH, 'html/body/div[2]/form/div[6]/input'
 
 # 委案批次管理
-zw_dhcs_wapcgl = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[4]/a'
+zw_dhcs_wapcgl = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[4]/a'
 # 委案批次号
 zw_dhcs_wapcgl_pch = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 机构名称
@@ -505,7 +536,7 @@ zw_dhcs_wapcgl_jgmc = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 zw_dhcs_wapcgl_cx = By.XPATH, 'html/body/div[1]/form/div[4]/input'
 
 # 委案案件中心
-zw_dhcs_waajzx = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[5]/a'
+zw_dhcs_waajzx = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[5]/a'
 # 客户姓名
 zw_dhcs_waajzx_name = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 客户电话
@@ -514,11 +545,15 @@ zw_dhcs_waajzx_phone = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 zw_dhcs_waajzx_ddbh = By.XPATH, 'html/body/div[1]/form/div[3]/input'
 # 案件批次
 zw_dhcs_waajzx_ajpc = By.XPATH, 'html/body/div[1]/form/div[4]/input'
+# 点击责任人
+zw_dhcs_waajzx_zrr = By.XPATH, 'html/body/div[1]/form/div[5]/div/a'
+# 选择责任人
+zw_dhcs_waajzx_zrr_xz = By.XPATH, 'html/body/div[11]/ul/li[2]/div'
 # 查询
-zw_dhcs_waajzx_cx = By.XPATH, 'html/body/div[1]/form/div[7]/input'
+zw_dhcs_waajzx_cx = By.XPATH, 'html/body/div[1]/form/div[8]/input'
 
 # 回款明细
-zw_dhcs_hkmx = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li[6]/a'
+zw_dhcs_hkmx = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li[6]/a'
 # 客户姓名
 zw_dhcs_hkmx_name = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 客户电话
@@ -527,21 +562,31 @@ zw_dhcs_hkmx_phone = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 zw_dhcs_hkmx_wapch = By.XPATH, 'html/body/div[1]/form/div[3]/input'
 # 订单编号
 zw_dhcs_hkmx_ddbh = By.XPATH, 'html/body/div[1]/form/div[4]/input'
+# 时间类型
+# 点击责任人
+zw_dhcs_hkmx_zrr = By.XPATH, 'html/body/div[1]/form/div[6]/div/a'
+# 选择责任人
+zw_dhcs_hkmx_zrr_xz = By.XPATH, 'html/body/div[7]/ul/li[2]/div'
+# 催记次数
+zw_dhcs_hkmx_cjcs = By.XPATH, 'html/body/div[1]/form/div[7]/input'
 # 查询
-zw_dhcs_hkmx_cx = By.XPATH, 'html/body/div[1]/form/div[7]/input'
+zw_dhcs_hkmx_cx = By.XPATH, 'html/body/div[1]/form/div[8]/input'
 
 
 # 待还管理
-zw_dhgl = By.XPATH, 'html/body/div[1]/div[2]/div[1]/a'
+zw_dhgl = By.XPATH, 'html/body/div[1]/div[3]/div[1]/a'
 # 待还款客户
-zw_dh_kh = By.XPATH, 'html/body/div[1]/div[2]/div[2]/div/ul/li/a'
+zw_dh_kh = By.XPATH, 'html/body/div[1]/div[3]/div[2]/div/ul/li/a'
 # 订单编号
 zw_dh_kh_ddbh = By.XPATH, 'html/body/div[1]/form/div[1]/input'
 # 客户姓名
 zw_dh_kh_name = By.XPATH, 'html/body/div[1]/form/div[2]/input'
 # 客户电话
 zw_dh_kh_phone = By.XPATH, 'html/body/div[1]/form/div[3]/input'
-# 业务类型
+# 点击业务类型
+zw_dh_kh_ywlx = By.XPATH, 'html/body/div[1]/form/div[4]/div/a'
+# 选择业务类型
+zw_dh_kh_ywlx_xz = By.XPATH, 'html/body/div[7]/ul/li[3]/div'
 # 账单日
 # 查询
 zw_dh_kh_cx = By.XPATH, 'html/body/div[1]/form/div[6]/input[1]'

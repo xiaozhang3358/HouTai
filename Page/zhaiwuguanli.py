@@ -7,7 +7,7 @@ from selenium.webdriver.support.select import Select
 
 class PageZhaiWu(Base):
     # 点击贷中管理
-    def page_click_dzgl(self, zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh):
+    def page_click_dzgl(self, zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh, zw_dz_hktx_txcs):
         self.base_frame_back()
         # 点击债务管理
         self.base_click_btn(Page.zwgl)
@@ -23,10 +23,34 @@ class PageZhaiWu(Base):
         select1 = Select(self.base_find_element(Page.zw_dz_hktx_yhzt))
         # select1.select_by_visible_text(text4)
         select1.select_by_index(1)
-        # 选择剩余天数
-        select2 = Select(self.base_find_element(Page.zw_dz_hktx_syts))
-        # select2.select_by_visible_text(text5)
+        # 选择账单状态
+        select2 = Select(self.base_find_element(Page.zw_dz_hktx_zdzt))
         select2.select_by_index(2)
+        # 选择剩余天数
+        select3 = Select(self.base_find_element(Page.zw_dz_hktx_syts))
+        # select2.select_by_visible_text(text5)
+        select3.select_by_index(2)
+        # 选择提醒结果
+        select4 = Select(self.base_find_element(Page.zw_dz_hktx_txjg))
+        select4.select_by_index(2)
+        # 输入提醒次数
+        self.base_input_text(Page.zw_dz_hktx_txcs, zw_dz_hktx_txcs)
+        # 选择下次跟进时间
+        self.base_click_btn(Page.zw_dz_hktx_xcgjsj)
+        sleep(1)
+        self.base_click_btn(Page.zw_dz_hktx_xcgjsj_xz)
+        # 选择账单日
+        self.base_click_btn(Page.zw_dz_hktx_zdr)
+        sleep(1)
+        self.base_click_btn(Page.zw_dz_hktx_zdr_xz)
+        # 选择分配时间
+        self.base_click_btn(Page.zw_dz_hktx_fpsj)
+        sleep(1)
+        self.base_click_btn(Page.zw_dz_hktx_fpsj_xz)
+        # 选择责任人
+        self.base_click_btn(Page.zw_dz_hktx_zrr)
+        sleep(1)
+        self.base_click_btn(Page.zw_dz_hktx_zrr_xz)
         # 点击查询
         self.base_click_btn(Page.zw_dz_hktx_cx)
         sleep(5)
@@ -264,11 +288,10 @@ class PageZhaiWu(Base):
         self.base_click_btn(Page.zw_rbbb_wwjggcrb_cx)
         sleep(3)
 
-
     # 点击月报报表
-    def page_click_ybbb(self,zw_ybbb_csyyjyb_name, zw_ybbb_csyyjyb_zl, zw_ybbb_wwjgyb_wwjg):
+    def page_click_ybbb(self, zw_ybbb_csyyjyb_name, zw_ybbb_csyyjyb_zl, zw_ybbb_wwjgyb_wwjg):
         # 点击催收员业绩月报
-        self.base_iframe(Page.zw_ybbb,Page.zw_ybbb_csyyjyb)
+        self.base_iframe(Page.zw_ybbb, Page.zw_ybbb_csyyjyb)
         # 输入名字
         self.base_input_text(Page.zw_ybbb_csyyjyb_name, zw_ybbb_csyyjyb_name)
         # 输入账龄

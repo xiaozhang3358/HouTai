@@ -13,6 +13,7 @@ class PageFengKong(Base):
         self.base_click_btn(Page.fkzx)
         # 点击风控规则命中率
         self.base_aframe(Page.fk_fkgzmzl)
+        sleep(1)
         # 选择策略名称
         self.base_click_btn(Page.fk_gzmzl_clmc)
         sleep(1)
@@ -60,7 +61,7 @@ class PageFengKong(Base):
         sleep(5)
 
     # 点击黑名单管理
-    def page_click_hmdgl(self, fk_hmd_nr, fk_hmdk_tj_nrxx, fk_hmdk_tj_lhyy):
+    def page_click_hmdgl(self, fk_hmd_nr, fk_hmdk_tj_day, fk_hmdk_tj_nrxx, fk_hmdk_tj_lhyy):
         # 点击黑名单库
         self.base_iframe(Page.hmdgl, Page.fk_hmdk)
         # 输入内容
@@ -86,6 +87,8 @@ class PageFengKong(Base):
         self.base_click_btn(Page.fk_hmdk_tj_lmd)
         sleep(1)
         self.base_click_btn(Page.fk_hmdk_tj_lmd_xz)
+        # 输入灰名单结束时间
+        self.base_input_text(Page.fk_hmdk_tj_day, fk_hmdk_tj_day)
         # 输入内容信息
         self.base_input_text(Page.fk_hmdk_tj_nrxx, fk_hmdk_tj_nrxx)
         # 选择来源

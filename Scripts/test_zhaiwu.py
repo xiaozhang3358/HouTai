@@ -12,7 +12,7 @@ def get_data():
     # 定义一个空列表
     arrs = []
     for data in ReadYAML('zhaiwu_data.yaml').read_yaml().values():
-        arrs.append((data.get('zw_dz_hktx_name'), data.get('zw_dz_hktx_phone'), data.get('zw_dz_hktx_ddbh'),
+        arrs.append((data.get('zw_dz_hktx_name'), data.get('zw_dz_hktx_phone'), data.get('zw_dz_hktx_ddbh'), data.get('zw_dz_hktx_txcs'),
                      data.get('zw_dz_txjl_name'), data.get('zw_dz_txjl_phone'), data.get('zw_dh_kh_ddbh'),
                      data.get('zw_dh_kh_name'), data.get('zw_dh_kh_phone'), data.get('zw_dhcs_yqkhc_name'),
                      data.get('zw_dhcs_yqkhc_phone'), data.get('zw_dhcs_yqkhc_ddbh'), data.get('zw_dhcs_yqcs_name'),
@@ -41,14 +41,15 @@ class TestZhaiWu():
 
     # 点击债务管理
     @pytest.mark.parametrize(
-        'zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh,zw_dz_txjl_name, zw_dz_txjl_phone,zw_dh_kh_ddbh,'
+        'zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh, zw_dz_hktx_txcs, zw_dz_txjl_name, zw_dz_txjl_phone,zw_dh_kh_ddbh,'
         'zw_dh_kh_name, zw_dh_kh_phone,zw_dhcs_yqkhc_name, zw_dhcs_yqkhc_phone, zw_dhcs_yqkhc_ddbh,zw_dhcs_yqcs_name,'
         'zw_dhcs_yqcs_phone,zw_dhcs_csjlgl_name, zw_dhcs_csjlgl_phone,zw_dhcs_wapcgl_pch, zw_dhcs_wapcgl_jgmc,'
         'zw_dhcs_waajzx_name, zw_dhcs_waajzx_phone, zw_dhcs_waajzx_ddbh, zw_dhcs_waajzx_ajpc,zw_dhcs_hkmx_name,'
         'zw_dhcs_hkmx_phone,zw_dhcs_hkmx_wapch, zw_dhcs_hkmx_ddbh,zw_jggl_jgmc,zw_rygl_name, zw_rygl_phone,'
         'zw_rbbb_csyrb_csy, zw_rbbb_csygcrb_csy, zw_ybbb_csyyjyb_name, zw_ybbb_csyyjyb_zl, zw_ybbb_wwjgyb_wwjg',
         get_data())
-    def test_zhaiwu_gl(self, zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh, zw_dz_txjl_name, zw_dz_txjl_phone,
+    def test_zhaiwu_gl(self, zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh, zw_dz_hktx_txcs, zw_dz_txjl_name,
+                       zw_dz_txjl_phone,
                        zw_dh_kh_ddbh, zw_dh_kh_name, zw_dh_kh_phone, zw_dhcs_yqkhc_name, zw_dhcs_yqkhc_phone,
                        zw_dhcs_yqkhc_ddbh, zw_dhcs_yqcs_name, zw_dhcs_yqcs_phone, zw_dhcs_csjlgl_name,
                        zw_dhcs_csjlgl_phone, zw_dhcs_wapcgl_pch, zw_dhcs_wapcgl_jgmc, zw_dhcs_waajzx_name,
@@ -57,7 +58,7 @@ class TestZhaiWu():
                        zw_rygl_phone, zw_rbbb_csyrb_csy, zw_rbbb_csygcrb_csy, zw_ybbb_csyyjyb_name, zw_ybbb_csyyjyb_zl,
                        zw_ybbb_wwjgyb_wwjg):
         # 点击贷中管理
-        self.zhaiwu.page_click_dzgl(zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh)
+        self.zhaiwu.page_click_dzgl(zw_dz_hktx_name, zw_dz_hktx_phone, zw_dz_hktx_ddbh, zw_dz_hktx_txcs)
         # 点击提醒记录管理
         self.zhaiwu.page_click_txjlgl(zw_dz_txjl_name, zw_dz_txjl_phone)
         # 点击待还管理
