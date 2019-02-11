@@ -20,3 +20,4 @@ class PageLogin(Base):
         self.page_login_username('admini')
         self.page_login_pwd('admin')
         self.page_login_btn()
+        print('--------------')
